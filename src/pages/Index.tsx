@@ -255,7 +255,7 @@ export default function Index() {
             <div className="space-y-6">
               {[
                 { icon: "Phone", label: "Главный инженер", value: "+7 (913) 732-33-93", sub: "Звонки и WhatsApp", href: "tel:+79137323393" },
-                { icon: "Phone", label: "Мастер", value: "+7 996 380 06 08", sub: "Звонки и WhatsApp", href: "tel:+79963800608" },
+                { icon: "Phone", label: "Заведующий мастерской", value: "+7 996 380 06 08", sub: "Звонки и WhatsApp", href: "tel:+79963800608" },
                 { icon: "MapPin", label: "Адрес", value: "р.п. Сузун, ул. Комиссара Зятькова, д. 20", sub: "633621, Новосибирская область", href: null },
                 { icon: "Mail", label: "E-mail", value: "rtpsuzun2006@yandex.ru", sub: "Ответим в течение часа", href: "mailto:rtpsuzun2006@yandex.ru" },
               ].map((c, i) => (
