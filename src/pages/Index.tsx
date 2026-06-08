@@ -452,7 +452,7 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-6">
               {[
-                { icon: "Phone", label: "Телефон", value: "+7 (900) 000-00-00", sub: "Звонки и WhatsApp, 24/7" },
+                { icon: "Phone", label: "Телефон", value: "+7 (913) 732-33-93", sub: "Звонки и WhatsApp" },
                 { icon: "MapPin", label: "Адрес", value: "г. Воронеж, ул. Промышленная, 14", sub: "Пн–Вс: 08:00 – 20:00" },
                 { icon: "Mail", label: "E-mail", value: "info@agroservice.ru", sub: "Ответим в течение часа" },
               ].map((c, i) => (
