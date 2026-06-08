@@ -210,7 +210,7 @@ export default function Index() {
                 {[
                   { icon: "Users", text: "Команда 25+ механиков" },
                   { icon: "MapPin", text: "Выезд по области" },
-                  { icon: "Clock", text: "Работаем без выходных" },
+                  { icon: "Clock", text: "Работаем 5/2" },
                   { icon: "Star", text: "Рейтинг 4.9 из 5" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
