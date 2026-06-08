@@ -282,7 +282,7 @@ export default function Index() {
             </div>
 
             <a
-              href="https://yandex.ru/maps/?text=633621+Новосибирская+область+Сузун+ул+Комиссара+Зятькова+20"
+              href="https://yandex.ru/maps/?pt=82.314544,53.821313&z=17&l=map"
               target="_blank"
               rel="noopener noreferrer"
               className="card-industrial overflow-hidden block"
