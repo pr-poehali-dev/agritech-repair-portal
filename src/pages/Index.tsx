@@ -29,33 +29,10 @@ const WARRANTY_ITEMS = [
   { icon: "PhoneCall", title: "Поддержка 5/2", desc: "Техническая консультация по телефону в рабочие дни" },
 ];
 
-const TIME_SLOTS = ["08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"];
 
-const SERVICE_OPTIONS = [
-  "Ремонт двигателя",
-  "Ремонт трансмиссии",
-  "Электрика и диагностика",
-  "Гидравлические системы",
-  "Техническое обслуживание",
-  "Выездной ремонт",
-  "Другое",
-];
 
 export default function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [bookingDate, setBookingDate] = useState("");
-  const [bookingTime, setBookingTime] = useState("");
-  const [bookingService, setBookingService] = useState("");
-  const [bookingName, setBookingName] = useState("");
-  const [bookingPhone, setBookingPhone] = useState("");
-  const [bookingCompany, setBookingCompany] = useState("");
-  const [bookingComment, setBookingComment] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
 
   const scrollTo = (href: string) => {
     const el = document.querySelector(href);
@@ -82,12 +59,12 @@ export default function Index() {
             ))}
           </div>
 
-          <button
-            onClick={() => scrollTo("#booking")}
+          <a
+            href="tel:+79137323393"
             className="hidden md:block btn-amber px-5 py-2 text-sm"
           >
-            Записаться
-          </button>
+            Позвонить
+          </a>
 
           <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)} style={{ color: "#F59E0B" }}>
             <Icon name={menuOpen ? "X" : "Menu"} size={24} />
@@ -99,7 +76,7 @@ export default function Index() {
             {NAV_LINKS.map((l) => (
               <button key={l.href} onClick={() => scrollTo(l.href)} className="nav-link text-left py-2">{l.label}</button>
             ))}
-            <button onClick={() => scrollTo("#booking")} className="btn-amber px-5 py-2 text-sm mt-2">Записаться</button>
+            <a href="tel:+79137323393" className="btn-amber px-5 py-2 text-sm mt-2">Позвонить</a>
           </div>
         )}
       </nav>
@@ -233,119 +210,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* BOOKING */}
-      <section id="booking" className="py-24 industrial-grid" style={{ borderTop: "1px solid rgba(245,158,11,0.1)" }}>
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <div className="h-px w-12" style={{ background: "#F59E0B" }} />
-              <span className="font-display text-sm tracking-widest uppercase" style={{ color: "#F59E0B" }}>Онлайн-запись</span>
-              <div className="h-px w-12" style={{ background: "#F59E0B" }} />
-            </div>
-            <h2 className="font-display text-4xl md:text-5xl font-bold" style={{ color: "#fff" }}>ЗАПИСЬ НА РЕМОНТ</h2>
-            <p className="mt-4" style={{ color: "#6B7280" }}>Выберите удобную дату и время — перезвоним для подтверждения</p>
-          </div>
-
-          {submitted ? (
-            <div className="text-center py-16 card-industrial">
-              <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6" style={{ background: "rgba(245,158,11,0.15)", border: "1px solid #F59E0B" }}>
-                <Icon name="CheckCircle" size={32} style={{ color: "#F59E0B" }} />
-              </div>
-              <h3 className="font-display text-2xl font-bold mb-3" style={{ color: "#fff" }}>ЗАЯВКА ПРИНЯТА!</h3>
-              <p style={{ color: "#9CA3AF" }}>Перезвоним в течение 30 минут для подтверждения записи</p>
-              <button
-                onClick={() => setSubmitted(false)}
-                className="btn-outline-amber px-8 py-3 text-sm mt-8"
-              >
-                Новая заявка
-              </button>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="card-industrial p-8 md:p-12">
-              <div className="mb-6">
-                <label className="block font-display text-sm tracking-wider uppercase mb-2" style={{ color: "#9CA3AF" }}>Наименование предприятия заказчика</label>
-                <input
-                  type="text"
-                  value={bookingCompany}
-                  onChange={(e) => setBookingCompany(e.target.value)}
-                  placeholder="ООО «Название организации»"
-                  className="w-full px-4 py-3 text-sm outline-none"
-                  style={{ background: "#1a1a1a", border: "1px solid rgba(245,158,11,0.2)", color: "#E8DFD0" }}
-                />
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label className="block font-display text-sm tracking-wider uppercase mb-2" style={{ color: "#9CA3AF" }}>Ваше имя *</label>
-                  <input
-                    type="text"
-                    required
-                    value={bookingName}
-                    onChange={(e) => setBookingName(e.target.value)}
-                    placeholder="Иван Петрович"
-                    className="w-full px-4 py-3 text-sm outline-none"
-                    style={{ background: "#1a1a1a", border: "1px solid rgba(245,158,11,0.2)", color: "#E8DFD0" }}
-                  />
-                </div>
-                <div>
-                  <label className="block font-display text-sm tracking-wider uppercase mb-2" style={{ color: "#9CA3AF" }}>Телефон *</label>
-                  <input
-                    type="tel"
-                    required
-                    value={bookingPhone}
-                    onChange={(e) => setBookingPhone(e.target.value)}
-                    placeholder="+7 (___) ___-__-__"
-                    className="w-full px-4 py-3 text-sm outline-none"
-                    style={{ background: "#1a1a1a", border: "1px solid rgba(245,158,11,0.2)", color: "#E8DFD0" }}
-                  />
-                </div>
-              </div>
-
-              <div className="mb-6">
-                <label className="block font-display text-sm tracking-wider uppercase mb-2" style={{ color: "#9CA3AF" }}>Вид работ *</label>
-                <select
-                  required
-                  value={bookingService}
-                  onChange={(e) => setBookingService(e.target.value)}
-                  className="w-full px-4 py-3 text-sm outline-none"
-                  style={{ background: "#1a1a1a", border: "1px solid rgba(245,158,11,0.2)", color: bookingService ? "#E8DFD0" : "#6B7280" }}
-                >
-                  <option value="" disabled>Выберите вид работ...</option>
-                  {SERVICE_OPTIONS.map((s) => (
-                    <option key={s} value={s} style={{ background: "#1a1a1a" }}>{s}</option>
-                  ))}
-                </select>
-              </div>
-
-
-
-              <div className="mb-8">
-                <label className="block font-display text-sm tracking-wider uppercase mb-2" style={{ color: "#9CA3AF" }}>Описание проблемы</label>
-                <textarea
-                  rows={3}
-                  value={bookingComment}
-                  onChange={(e) => setBookingComment(e.target.value)}
-                  placeholder="Опишите неисправность, марку техники и год выпуска..."
-                  className="w-full px-4 py-3 text-sm outline-none resize-none"
-                  style={{ background: "#1a1a1a", border: "1px solid rgba(245,158,11,0.2)", color: "#E8DFD0" }}
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="btn-amber w-full py-4 text-base flex items-center justify-center gap-3"
-              >
-                <Icon name="Calendar" size={18} style={{ color: "#111" }} />
-                Отправить заявку
-              </button>
-
-              <p className="text-center text-xs mt-4" style={{ color: "#4B5563" }}>
-                Нажимая кнопку, вы соглашаетесь на обработку персональных данных
-              </p>
-            </form>
-          )}
-        </div>
-      </section>
 
       {/* WARRANTY */}
       <section id="warranty" className="py-24" style={{ borderTop: "1px solid rgba(245,158,11,0.1)" }}>
@@ -411,10 +275,10 @@ export default function Index() {
                 </div>
               ))}
 
-              <button onClick={() => scrollTo("#booking")} className="btn-amber w-full py-4 text-base flex items-center justify-center gap-3">
-                <Icon name="CalendarCheck" size={18} style={{ color: "#111" }} />
-                Записаться онлайн
-              </button>
+              <a href="tel:+79137323393" className="btn-amber w-full py-4 text-base flex items-center justify-center gap-3">
+                <Icon name="Phone" size={18} style={{ color: "#111" }} />
+                Позвонить нам
+              </a>
             </div>
 
             <div className="card-industrial overflow-hidden" style={{ minHeight: "400px", position: "relative" }}>
