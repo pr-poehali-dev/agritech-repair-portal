@@ -93,7 +93,7 @@ export default function Index() {
             <div className="w-8 h-8 flex items-center justify-center" style={{ background: "#F59E0B" }}>
               <Icon name="Wrench" size={16} style={{ color: "#111" }} />
             </div>
-            <span className="font-display text-xl font-bold tracking-widest uppercase" style={{ color: "#F59E0B" }}>АгроСервис</span>
+            <span className="font-display text-xl font-bold tracking-widest uppercase" style={{ color: "#F59E0B" }}>Сузунское РТП</span>
           </div>
 
           <div className="hidden md:flex items-center gap-8">
