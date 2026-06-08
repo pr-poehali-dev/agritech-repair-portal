@@ -118,7 +118,7 @@ export default function Index() {
 
             <div className="flex flex-wrap gap-8 mt-14 animate-fade-up stagger-5">
               {[
-                { num: "29+", label: "Лет опыта" },
+                { num: "39", label: "Лет опыта" },
                 { num: "2 000+", label: "Ремонтов" },
                 { num: "12 мес", label: "Гарантия" },
                 { num: "5/2", label: "График работы" },
@@ -202,7 +202,7 @@ export default function Index() {
               <img src={WORKSHOP_IMG} alt="Мастерская Сузунское РТП" className="w-full object-cover" style={{ height: "400px", filter: "brightness(0.85)" }} />
               <div className="absolute inset-0" style={{ border: "2px solid rgba(245,158,11,0.2)", margin: "16px" }} />
               <div className="absolute bottom-4 left-4 p-5" style={{ background: "#F59E0B", minWidth: "160px" }}>
-                <div className="font-display text-4xl font-bold" style={{ color: "#111" }}>1997</div>
+                <div className="font-display text-4xl font-bold" style={{ color: "#111" }}>1987</div>
                 <div className="font-display text-sm tracking-wider uppercase mt-1" style={{ color: "#111" }}>Год основания</div>
               </div>
             </div>
