@@ -216,11 +216,11 @@ export default function Index() {
                 <div className="h-px w-12" style={{ background: "#F59E0B" }} />
                 <span className="font-display text-sm tracking-widest uppercase" style={{ color: "#F59E0B" }}>О компании</span>
               </div>
-              <h2 className="font-display text-4xl md:text-5xl font-bold mb-8" style={{ color: "#fff" }}>15 ЛЕТ В ДЕЛЕ</h2>
+              <h2 className="font-display text-4xl md:text-5xl font-bold mb-8" style={{ color: "#fff" }}>АО СУЗУНСКОЕ РТП</h2>
 
               <div className="space-y-5 mb-10" style={{ color: "#9CA3AF" }}>
                 <p className="leading-relaxed">
-                  АгроСервис — специализированный центр ремонта и технического обслуживания сельскохозяйственной техники. Работаем с 2009 года, обслуживаем хозяйства и фермерские предприятия по всей области.
+                  АО «Сузунское ремонтно-техническое предприятие» — специализированный центр ремонта и технического обслуживания сельскохозяйственной техники. Обслуживаем хозяйства и фермерские предприятия по всему региону.
                 </p>
                 <p className="leading-relaxed">
                   В нашей команде — сертифицированные механики с опытом работы на технике ведущих производителей: John Deere, CLAAS, Case IH, New Holland, Ростсельмаш, МТЗ и другие марки.
