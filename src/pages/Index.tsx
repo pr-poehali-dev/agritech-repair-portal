@@ -164,7 +164,7 @@ export default function Index() {
                 { num: "20+", label: "Лет опыта" },
                 { num: "2 000+", label: "Ремонтов" },
                 { num: "12 мес", label: "Гарантия" },
-                { num: "24/7", label: "Поддержка" },
+                { num: "5/2", label: "График работы" },
               ].map((s) => (
                 <div key={s.label}>
                   <div className="font-display text-3xl font-bold" style={{ color: "#F59E0B" }}>{s.num}</div>
