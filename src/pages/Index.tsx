@@ -9,7 +9,6 @@ const NAV_LINKS = [
   { label: "Услуги", href: "#services" },
   { label: "О нас", href: "#about" },
   { label: "Гарантия", href: "#warranty" },
-  { label: "Отзывы", href: "#reviews" },
   { label: "Контакты", href: "#contacts" },
 ];
 
@@ -22,26 +21,6 @@ const SERVICES = [
   { icon: "Truck", title: "Выездной ремонт", desc: "Ремонт непосредственно на полях и фермах — выезд по всей области" },
 ];
 
-const REVIEWS = [
-  {
-    name: "Иван Петрович Сидоров",
-    role: "Фермер, Воронежская область",
-    text: "Обратился с поломкой комбайна в разгар уборки. Ребята приехали через 2 часа, починили прямо на поле. Спасли весь урожай. Работают профессионально и быстро.",
-    rating: 5,
-  },
-  {
-    name: "ООО «АгроПлюс»",
-    role: "Руководитель парка техники",
-    text: "Обслуживаем у них весь парк — 12 единиц техники. Всегда в срок, никаких сюрпризов по цене. Гарантия реально работает — один раз обратились по гарантийному случаю, всё решили без вопросов.",
-    rating: 5,
-  },
-  {
-    name: "Сергей Анатольевич Краснов",
-    role: "Фермерское хозяйство КФХ",
-    text: "До этого чинились в другом месте — постоянно переделки. Здесь с первого раза сделали всё правильно. Двигатель работает как новый уже второй сезон.",
-    rating: 5,
-  },
-];
 
 const WARRANTY_ITEMS = [
   { icon: "BadgeCheck", title: "12 месяцев", desc: "Гарантия на все выполненные работы без исключений" },
@@ -407,38 +386,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* REVIEWS */}
-      <section id="reviews" className="py-24 industrial-grid" style={{ borderTop: "1px solid rgba(245,158,11,0.1)" }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="h-px w-12" style={{ background: "#F59E0B" }} />
-            <span className="font-display text-sm tracking-widest uppercase" style={{ color: "#F59E0B" }}>Клиенты о нас</span>
-          </div>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-16" style={{ color: "#fff" }}>ОТЗЫВЫ</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {REVIEWS.map((r, i) => (
-              <div key={i} className="card-industrial p-8">
-                <div className="flex gap-1 mb-5">
-                  {Array.from({ length: r.rating }).map((_, j) => (
-                    <Icon key={j} name="Star" size={14} style={{ color: "#F59E0B" }} />
-                  ))}
-                </div>
-                <p className="text-sm leading-relaxed mb-6" style={{ color: "#9CA3AF" }}>«{r.text}»</p>
-                <div className="flex items-center gap-3" style={{ borderTop: "1px solid rgba(245,158,11,0.1)", paddingTop: "1.25rem" }}>
-                  <div className="w-10 h-10 flex items-center justify-center font-display font-bold text-sm" style={{ background: "rgba(245,158,11,0.15)", color: "#F59E0B" }}>
-                    {r.name[0]}
-                  </div>
-                  <div>
-                    <div className="font-display text-sm font-semibold" style={{ color: "#fff" }}>{r.name}</div>
-                    <div className="text-xs mt-0.5" style={{ color: "#4B5563" }}>{r.role}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CONTACTS */}
       <section id="contacts" className="py-24" style={{ borderTop: "1px solid rgba(245,158,11,0.1)" }}>
