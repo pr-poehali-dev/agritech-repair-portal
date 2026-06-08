@@ -177,10 +177,6 @@ export default function Index() {
                 </div>
                 <h3 className="font-display text-xl font-semibold mb-3" style={{ color: "#fff" }}>{s.title}</h3>
                 <p className="text-sm leading-relaxed" style={{ color: "#6B7280" }}>{s.desc}</p>
-                <div className="flex items-center gap-2 mt-6 text-sm font-display tracking-wider uppercase" style={{ color: "#F59E0B" }}>
-                  <span>Подробнее</span>
-                  <Icon name="ArrowRight" size={14} />
-                </div>
               </div>
             ))}
           </div>
