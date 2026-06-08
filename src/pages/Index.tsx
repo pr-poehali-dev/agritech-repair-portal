@@ -259,20 +259,33 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-6">
               {[
-                { icon: "Phone", label: "Телефон", value: "+7 (913) 732-33-93", sub: "Звонки и WhatsApp" },
-                { icon: "MapPin", label: "Адрес", value: "р.п. Сузун, ул. Комиссара Зятькова, д. 20", sub: "633621, Новосибирская область" },
-                { icon: "Mail", label: "E-mail", value: "rtpsuzun2006@yandex.ru", sub: "Ответим в течение часа" },
+                { icon: "Phone", label: "Телефон", value: "+7 (913) 732-33-93", sub: "Звонки и WhatsApp", href: "tel:+79137323393" },
+                { icon: "MapPin", label: "Адрес", value: "р.п. Сузун, ул. Комиссара Зятькова, д. 20", sub: "633621, Новосибирская область", href: null },
+                { icon: "Mail", label: "E-mail", value: "rtpsuzun2006@yandex.ru", sub: "Ответим в течение часа", href: "mailto:rtpsuzun2006@yandex.ru" },
               ].map((c, i) => (
-                <div key={i} className="flex items-start gap-5 p-6 card-industrial">
-                  <div className="w-12 h-12 flex items-center justify-center flex-shrink-0" style={{ background: "rgba(245,158,11,0.1)", border: "1px solid rgba(245,158,11,0.3)" }}>
-                    <Icon name={c.icon} size={20} style={{ color: "#F59E0B" }} />
+                c.href ? (
+                  <a key={i} href={c.href} className="flex items-start gap-5 p-6 card-industrial">
+                    <div className="w-12 h-12 flex items-center justify-center flex-shrink-0" style={{ background: "rgba(245,158,11,0.1)", border: "1px solid rgba(245,158,11,0.3)" }}>
+                      <Icon name={c.icon} size={20} style={{ color: "#F59E0B" }} />
+                    </div>
+                    <div>
+                      <div className="font-display text-xs tracking-widest uppercase mb-1" style={{ color: "#4B5563" }}>{c.label}</div>
+                      <div className="font-display text-lg font-semibold" style={{ color: "#fff" }}>{c.value}</div>
+                      <div className="text-sm mt-1" style={{ color: "#6B7280" }}>{c.sub}</div>
+                    </div>
+                  </a>
+                ) : (
+                  <div key={i} className="flex items-start gap-5 p-6 card-industrial">
+                    <div className="w-12 h-12 flex items-center justify-center flex-shrink-0" style={{ background: "rgba(245,158,11,0.1)", border: "1px solid rgba(245,158,11,0.3)" }}>
+                      <Icon name={c.icon} size={20} style={{ color: "#F59E0B" }} />
+                    </div>
+                    <div>
+                      <div className="font-display text-xs tracking-widest uppercase mb-1" style={{ color: "#4B5563" }}>{c.label}</div>
+                      <div className="font-display text-lg font-semibold" style={{ color: "#fff" }}>{c.value}</div>
+                      <div className="text-sm mt-1" style={{ color: "#6B7280" }}>{c.sub}</div>
+                    </div>
                   </div>
-                  <div>
-                    <div className="font-display text-xs tracking-widest uppercase mb-1" style={{ color: "#4B5563" }}>{c.label}</div>
-                    <div className="font-display text-lg font-semibold" style={{ color: "#fff" }}>{c.value}</div>
-                    <div className="text-sm mt-1" style={{ color: "#6B7280" }}>{c.sub}</div>
-                  </div>
-                </div>
+                )
               ))}
 
               <a href="tel:+79137323393" className="btn-amber w-full py-4 text-base flex items-center justify-center gap-3">
