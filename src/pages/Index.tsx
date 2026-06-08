@@ -2,7 +2,7 @@ import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
 const HERO_IMG = "https://cdn.poehali.dev/projects/4c105996-462e-4299-8b4f-40a54fd6af1f/bucket/181e6ede-8cd7-41c3-8799-7d1d20372367.JPG";
-const WORKSHOP_IMG = "https://cdn.poehali.dev/projects/4c105996-462e-4299-8b4f-40a54fd6af1f/files/6079ed53-909f-47a6-ac0b-a1e129c40c1c.jpg";
+const WORKSHOP_IMG = "https://cdn.poehali.dev/projects/4c105996-462e-4299-8b4f-40a54fd6af1f/bucket/f202b7c3-b288-499e-9221-16075172842f.png";
 
 const NAV_LINKS = [
   { label: "Главная", href: "#hero" },
