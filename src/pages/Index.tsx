@@ -281,13 +281,19 @@ export default function Index() {
               </a>
             </div>
 
-            <div className="card-industrial overflow-hidden" style={{ minHeight: "400px", position: "relative" }}>
+            <a
+              href="https://yandex.ru/maps/?text=633621+Новосибирская+область+Сузун+ул+Комиссара+Зятькова+20"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-industrial overflow-hidden block"
+              style={{ minHeight: "400px", position: "relative" }}
+            >
               <div className="absolute inset-0 flex items-center justify-center flex-col gap-4" style={{ background: "#111" }}>
                 <Icon name="MapPin" size={48} style={{ color: "#F59E0B" }} />
-                <p className="font-display text-lg" style={{ color: "#9CA3AF" }}>р.п. Сузун, ул. Комиссара Зятькова, д. 20</p>
-                <p className="text-sm" style={{ color: "#4B5563" }}>Карта откроется при нажатии</p>
+                <p className="font-display text-lg text-center px-4" style={{ color: "#9CA3AF" }}>р.п. Сузун, ул. Комиссара Зятькова, д. 20</p>
+                <p className="text-sm" style={{ color: "#4B5563" }}>Нажмите, чтобы открыть карту</p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
