@@ -453,8 +453,8 @@ export default function Index() {
             <div className="space-y-6">
               {[
                 { icon: "Phone", label: "Телефон", value: "+7 (913) 732-33-93", sub: "Звонки и WhatsApp" },
-                { icon: "MapPin", label: "Адрес", value: "г. Воронеж, ул. Промышленная, 14", sub: "Пн–Вс: 08:00 – 20:00" },
-                { icon: "Mail", label: "E-mail", value: "info@agroservice.ru", sub: "Ответим в течение часа" },
+                { icon: "MapPin", label: "Адрес", value: "р.п. Сузун, ул. Комиссара Зятькова, д. 20", sub: "633621, Новосибирская область" },
+                { icon: "Mail", label: "E-mail", value: "rtpsuzun2006@yandex.ru", sub: "Ответим в течение часа" },
               ].map((c, i) => (
                 <div key={i} className="flex items-start gap-5 p-6 card-industrial">
                   <div className="w-12 h-12 flex items-center justify-center flex-shrink-0" style={{ background: "rgba(245,158,11,0.1)", border: "1px solid rgba(245,158,11,0.3)" }}>
