@@ -141,7 +141,7 @@ export default function Index() {
 
             <div className="flex flex-wrap gap-8 mt-14 animate-fade-up stagger-5">
               {[
-                { num: "20+", label: "Лет опыта" },
+                { num: "29+", label: "Лет опыта" },
                 { num: "2 000+", label: "Ремонтов" },
                 { num: "12 мес", label: "Гарантия" },
                 { num: "5/2", label: "График работы" },
