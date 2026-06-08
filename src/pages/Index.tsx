@@ -69,6 +69,7 @@ export default function Index() {
   const [bookingService, setBookingService] = useState("");
   const [bookingName, setBookingName] = useState("");
   const [bookingPhone, setBookingPhone] = useState("");
+  const [bookingCompany, setBookingCompany] = useState("");
   const [bookingComment, setBookingComment] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -286,6 +287,18 @@ export default function Index() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="card-industrial p-8 md:p-12">
+              <div className="mb-6">
+                <label className="block font-display text-sm tracking-wider uppercase mb-2" style={{ color: "#9CA3AF" }}>Наименование предприятия заказчика</label>
+                <input
+                  type="text"
+                  value={bookingCompany}
+                  onChange={(e) => setBookingCompany(e.target.value)}
+                  placeholder="ООО «Название организации»"
+                  className="w-full px-4 py-3 text-sm outline-none"
+                  style={{ background: "#1a1a1a", border: "1px solid rgba(245,158,11,0.2)", color: "#E8DFD0" }}
+                />
+              </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block font-display text-sm tracking-wider uppercase mb-2" style={{ color: "#9CA3AF" }}>Ваше имя *</label>
