@@ -477,7 +477,7 @@ export default function Index() {
             <div className="card-industrial overflow-hidden" style={{ minHeight: "400px", position: "relative" }}>
               <div className="absolute inset-0 flex items-center justify-center flex-col gap-4" style={{ background: "#111" }}>
                 <Icon name="MapPin" size={48} style={{ color: "#F59E0B" }} />
-                <p className="font-display text-lg" style={{ color: "#9CA3AF" }}>г. Воронеж, ул. Промышленная, 14</p>
+                <p className="font-display text-lg" style={{ color: "#9CA3AF" }}>р.п. Сузун, ул. Комиссара Зятькова, д. 20</p>
                 <p className="text-sm" style={{ color: "#4B5563" }}>Карта откроется при нажатии</p>
               </div>
             </div>
