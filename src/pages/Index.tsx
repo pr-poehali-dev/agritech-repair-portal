@@ -342,40 +342,7 @@ export default function Index() {
                 </select>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label className="block font-display text-sm tracking-wider uppercase mb-2" style={{ color: "#9CA3AF" }}>Дата *</label>
-                  <input
-                    type="date"
-                    required
-                    value={bookingDate}
-                    onChange={(e) => setBookingDate(e.target.value)}
-                    min={new Date().toISOString().split("T")[0]}
-                    className="w-full px-4 py-3 text-sm outline-none"
-                    style={{ background: "#1a1a1a", border: "1px solid rgba(245,158,11,0.2)", color: "#E8DFD0", colorScheme: "dark" }}
-                  />
-                </div>
-                <div>
-                  <label className="block font-display text-sm tracking-wider uppercase mb-2" style={{ color: "#9CA3AF" }}>Время *</label>
-                  <div className="grid grid-cols-5 gap-2">
-                    {TIME_SLOTS.map((t) => (
-                      <button
-                        key={t}
-                        type="button"
-                        onClick={() => setBookingTime(t)}
-                        className="py-2 text-xs font-display tracking-wide transition-all"
-                        style={{
-                          background: bookingTime === t ? "#F59E0B" : "#1a1a1a",
-                          border: `1px solid ${bookingTime === t ? "#F59E0B" : "rgba(245,158,11,0.2)"}`,
-                          color: bookingTime === t ? "#111" : "#9CA3AF",
-                        }}
-                      >
-                        {t}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
+
 
               <div className="mb-8">
                 <label className="block font-display text-sm tracking-wider uppercase mb-2" style={{ color: "#9CA3AF" }}>Описание проблемы</label>
