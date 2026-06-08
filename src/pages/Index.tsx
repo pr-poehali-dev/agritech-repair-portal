@@ -225,7 +225,7 @@ export default function Index() {
               <img src={WORKSHOP_IMG} alt="Мастерская Сузунское РТП" className="w-full object-cover" style={{ height: "520px", filter: "brightness(0.85)" }} />
               <div className="absolute inset-0" style={{ border: "2px solid rgba(245,158,11,0.2)", margin: "16px" }} />
               <div className="absolute -bottom-6 -left-6 p-6" style={{ background: "#F59E0B", minWidth: "180px" }}>
-                <div className="font-display text-4xl font-bold" style={{ color: "#111" }}>2009</div>
+                <div className="font-display text-4xl font-bold" style={{ color: "#111" }}>1997</div>
                 <div className="font-display text-sm tracking-wider uppercase mt-1" style={{ color: "#111" }}>Год основания</div>
               </div>
             </div>
