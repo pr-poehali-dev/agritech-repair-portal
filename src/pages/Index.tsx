@@ -512,9 +512,9 @@ export default function Index() {
             <div className="w-6 h-6 flex items-center justify-center" style={{ background: "#F59E0B" }}>
               <Icon name="Wrench" size={12} style={{ color: "#111" }} />
             </div>
-            <span className="font-display tracking-widest uppercase text-sm" style={{ color: "#F59E0B" }}>АгроСервис</span>
+            <span className="font-display tracking-widest uppercase text-sm" style={{ color: "#F59E0B" }}>Сузунское РТП</span>
           </div>
-          <p className="text-xs text-center" style={{ color: "#374151" }}>© 2024 АгроСервис. Все права защищены.</p>
+          <p className="text-xs text-center" style={{ color: "#374151" }}>© 2024 АО «Сузунское РТП». Все права защищены.</p>
           <div className="flex gap-6">
             {NAV_LINKS.slice(0, 4).map((l) => (
               <button key={l.href} onClick={() => scrollTo(l.href)} className="text-xs nav-link">{l.label}</button>
