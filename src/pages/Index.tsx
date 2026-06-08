@@ -50,7 +50,7 @@ export default function Index() {
             <div className="w-8 h-8 flex items-center justify-center" style={{ background: "#F59E0B" }}>
               <Icon name="Wrench" size={16} style={{ color: "#111" }} />
             </div>
-            <span className="font-display text-xl font-bold tracking-widest uppercase" style={{ color: "#F59E0B" }}>Сузунское РТП</span>
+            <span className="font-display text-base md:text-xl font-bold tracking-widest uppercase" style={{ color: "#F59E0B" }}>Сузунское РТП</span>
           </div>
 
           <div className="hidden md:flex items-center gap-8">
@@ -90,7 +90,7 @@ export default function Index() {
         <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(13,13,13,0.95) 0%, rgba(13,13,13,0.7) 60%, rgba(13,13,13,0.3) 100%)" }} />
         <div className="absolute inset-0 industrial-grid" />
 
-        <div className="relative max-w-7xl mx-auto px-6 pt-20">
+        <div className="relative max-w-7xl mx-auto px-4 md:px-6 pt-20 w-full">
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-6 animate-fade-up stagger-1">
               <div className="h-px w-12" style={{ background: "#F59E0B" }} />
@@ -108,9 +108,9 @@ export default function Index() {
             </p>
 
             <div className="flex flex-wrap gap-4 animate-fade-up stagger-4">
-              <button onClick={() => scrollTo("#booking")} className="btn-amber px-8 py-4 text-base">
-                Записаться на ремонт
-              </button>
+              <a href="tel:+79137323393" className="btn-amber px-8 py-4 text-base">
+                Позвонить нам
+              </a>
               <button onClick={() => scrollTo("#services")} className="btn-outline-amber px-8 py-4 text-base">
                 Наши услуги
               </button>
@@ -198,10 +198,10 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="relative">
-              <img src={WORKSHOP_IMG} alt="Мастерская Сузунское РТП" className="w-full object-cover" style={{ height: "520px", filter: "brightness(0.85)" }} />
+            <div className="relative mt-8 lg:mt-0">
+              <img src={WORKSHOP_IMG} alt="Мастерская Сузунское РТП" className="w-full object-cover" style={{ height: "400px", filter: "brightness(0.85)" }} />
               <div className="absolute inset-0" style={{ border: "2px solid rgba(245,158,11,0.2)", margin: "16px" }} />
-              <div className="absolute -bottom-6 -left-6 p-6" style={{ background: "#F59E0B", minWidth: "180px" }}>
+              <div className="absolute bottom-4 left-4 p-5" style={{ background: "#F59E0B", minWidth: "160px" }}>
                 <div className="font-display text-4xl font-bold" style={{ color: "#111" }}>1997</div>
                 <div className="font-display text-sm tracking-wider uppercase mt-1" style={{ color: "#111" }}>Год основания</div>
               </div>
